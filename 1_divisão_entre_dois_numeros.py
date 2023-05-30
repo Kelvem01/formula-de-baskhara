@@ -8,3 +8,4 @@ if num2==0:
 else:
     divisao=num1/num2
     print('o resultado é',divisao)
+    print('programa finalizado!')
