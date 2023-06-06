@@ -4,7 +4,7 @@
 # criando funções para gerar um programa dinamico
 import sqlite3
 import datetime
-
+# função de cadastro / create
 def cadastro(conn):
     cursor = conn.cursor()
 
@@ -24,7 +24,7 @@ def cadastro(conn):
     cursor.execute(sql, valores)
     
     conn.commit()
-
+# função para mostrar cadastro / read
 def mostrar_cadastro(conn):
     cursor = conn.cursor()
     id = input('digite o id do cadastro desejado: ')
@@ -35,7 +35,7 @@ def mostrar_cadastro(conn):
     dados = cursor.execute(sql)
     for dado in dados :
         print(f'ID:{dado[0]}',f'NOME:{dado[1]}',f'CPF:{dado[2]}',f'DATA:{data.strftime("%d/%m/%Y")}')
-
+# função para mostrar todos os cadastros /read
 def mostra_todos_cad(conn):
     cursor = conn.cursor()
     sql = 'SELECT * FROM cadastro'
@@ -43,7 +43,7 @@ def mostra_todos_cad(conn):
 
     for dado in dados:
         print(f'nome:{dado[1]}',f'cpf:{dado[2]}')
-
+# função para atualizar cadastro /update
 def atualizar_cad(conn):
     cursor = conn.cursor()
 
@@ -64,7 +64,7 @@ def atualizar_cad(conn):
     
     cursor.execute(sql)
     conn.commit()
-
+# função para deletar cadastro / delete
 def deletar_cad(conn):
     cursor = conn.cursor()
     id = int(input('digite o id que deseja deletar: '))
