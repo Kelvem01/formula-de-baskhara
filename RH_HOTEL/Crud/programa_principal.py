@@ -16,7 +16,7 @@ print("""
     [5] Deletar cadastro
     [0] Finalizar programa """)
 
-# looping com while para melor desenpenho
+# looping com while para melhor desenpenho ecodigo limpo
 while True:
     op = input('Digite a opção desejada: ')
     if op == '0':
