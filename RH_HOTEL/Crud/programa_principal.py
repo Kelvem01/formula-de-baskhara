@@ -1,5 +1,4 @@
 # Kelvem ferreira da silva
-# Fabio Fernandes Elias
 # Trabalho crud umc
 
 # impostrando sql para obter o banco de dados
